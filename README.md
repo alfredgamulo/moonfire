@@ -1,7 +1,7 @@
 # moonfire
 
-This document outlines the development process for this project app.
-For notes about take-home assignment, my general thoughts, and answers to the outstanding questions, please read the `NOTES.md`
+**This document outlines the development process for this project app.
+For notes about take-home assignment, my general thoughts, and answers to the outstanding questions, please read the [NOTES.md](NOTES.md)**
 
 ## Bootstrapping the environment
 
