@@ -11,5 +11,10 @@ format:
     poetry run black app
     poetry run flake8 app
 
-run: format
+css:
+    #!/bin/env bash
+    cd app/tailwindcss
+    npx tailwindcss -i ./styles/app.css -o ../static/css/app.css
+
+run: format css
     poetry run uvicorn app.main:app --reload
