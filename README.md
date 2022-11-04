@@ -29,7 +29,7 @@ poetry install
 Note: `just` is a cli tool for organizing scripts.
 More info at https://github.com/casey/just.
 
----
+___
 **Thoughts:**
 For this take-home project, I thought that the easiest way for me to make a simple webapp would be with using FastAPI. To add a little bit of flair, I added TailwindCSS.
 ___
@@ -39,3 +39,28 @@ npm install -D tailwindcss
 npm install -D daisyui
 npx tailwindcss init
 ```
+
+## Running the webapp
+Assuming that the user has `just` installed, a lot of the commands necessary to build and run the webapp are listed in the `justfile` at the root directory.
+
+`just run` will start the uvicorn webapp on port 8000.
+This process will also have a background task that pings a designated url for the smoke test. The environment variables that this project webapp accepts are:
+* `MOONFIRE_URL`
+* `MOONFIRE_METHOD`
+* `MOONFIRE_HEADERS`
+* `MOONFIRE_PARAMS`
+* `MOONFIRE_DATA`
+* `MOONFIRE_SLEEP`
+
+The first five variables represent ways to configure the request that moonfire should smoke test. The last variable sets the sleep cycle for convenience.
+
+___
+**Thoughts:**
+My reasoning for having these variables configurable through the environment is for deploying the container multiple times for the number of URLs being validated.
+___
+
+## Building the Docker image
+
+`just build-docker` will build the included Dockerfile.
+
+`just run-docker` is analogous to the `just run` command above, with the same environment variables set for the shortcut as well.
