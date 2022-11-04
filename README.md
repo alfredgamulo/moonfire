@@ -29,3 +29,7 @@ poetry install
 Note: `just` is a cli tool for organizing scripts.
 More info at https://github.com/casey/just.
 
+---
+**Thoughts:**
+For this take-home project, I thought that the easiest way for me to make a simple webapp would be with using FastAPI
+___
