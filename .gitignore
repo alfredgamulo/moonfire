@@ -31,3 +31,4 @@ override.tf.json
 .venv
 **/__pycache__
 **/node_modules
+requirements.txt

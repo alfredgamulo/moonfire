@@ -7,14 +7,26 @@ install:
     poetry env use -- $(which python)
     poetry install
 
+# Format Python
 format:
     poetry run black app
     poetry run flake8 app
 
+# Compile CSS
 css:
     #!/bin/env bash
     cd app/tailwindcss
     npx tailwindcss -i ./styles/app.css -o ../static/css/app.css
 
+# Run the webapp locally
 run: format css
     MOONFIRE_URL="https://getluna.com" MOONFIRE_SLEEP=1 poetry run uvicorn app.main:app --reload
+
+# Build the Docker image
+build-docker:
+    poetry export --without-hashes --format=requirements.txt > requirements.txt
+    docker build -t moonfire .
+
+# Run the webapp from the Docker image
+run-docker:
+    docker run -p 8000:80 --name moonfire --rm -e MOONFIRE_URL="https://getluna.com/" -e MOONFIRE_SLEEP=1 moonfire
