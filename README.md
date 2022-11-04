@@ -1,5 +1,8 @@
 # moonfire
 
+This document outlines the development process for this project app.
+For notes about take-home assignment, my general thoughts, and answers to the outstanding questions, please read the `NOTES.md`
+
 ## Bootstrapping the environment
 
 These are my general terminal commands used to startup my dev environment for Python development:
