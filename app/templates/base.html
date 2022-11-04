@@ -5,13 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moonfire</title>
+    <title>Document</title>
     <link href="{{url_for('static', path='/css/app.css')}}" rel="stylesheet" />
     <link id="favicon" rel="icon" type="image/x-icon" href="{{url_for('static', path='favicon.ico')}}" />
 </head>
 
 <body>
-    <div class="bg-green-500">Hello World</div>
+    <div class="navbar bg-primary text-primary-content">
+        <div class="navbar-start">
+
+        </div>
+        <div class="navbar-center">
+            <a class="normal-case text-xl">Smoke test target: {{ target }}</a>
+        </div>
+        <div class="navbar-end">
+
+        </div>
+    </div>
+    <div class="grid place-items-center">
+        <table class="table table-auto">
+            <thead>
+                <th>URL</th>
+                <th>Status Code</th>
+                <th>Timestamp</th>
+            </thead>
+            <tbody>
+                {%- for s in status %}
+                <tr>
+                    <td>{{ s["url"] }}</td>
+                    <td>{{ s["status"]}}</td>
+                    <td>{{ s["timestamp"] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>
