@@ -64,3 +64,12 @@ ___
 `just build-docker` will build the included Dockerfile.
 
 `just run-docker` is analogous to the `just run` command above, with the same environment variables set for the shortcut as well.
+
+## Create ECR and push the Dockerfile to AWS
+`just deploy-ecr` will run the terraform module to create the `moonfire` ECR to your AWS account.
+
+`just push-docker` will push the built Docker image up to the newly created ECR.
+
+## Create the AWS APP
+`just deploy-app` will run the terraform module to create the `moonfire` app in ECS.
+This command also prints out the `service_url` (the loadbalancer DNS) so that you can easily view the webapp as it is deployed in AWS.
