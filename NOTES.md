@@ -21,7 +21,7 @@ I would create a custom Cloudwatch Dashboard that has uptime of the ECS service 
 ___
 
 ___
-> ***How would you plan out steps to figure out unknowns when it comes to making it production-ready?*
+> **How would you plan out steps to figure out unknowns when it comes to making it production-ready?**
 
 In general, I would review what I've learned about making a product highly available and that it meets the bar for an AWS Well-Architected Framework. In terms of battle-testing the product, there are many tools to check if the service can handle traffic or load. These tools include gatling, locust, jmeter. I could run more infosec driven tests with BurpSuite. With this being an internal tool, I probably wouldn't require a third-party service to give an app-sec review, but I would consider that aspect for public-facing web apps.
 ___
