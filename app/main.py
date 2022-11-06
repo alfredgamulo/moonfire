@@ -60,6 +60,7 @@ class BackgroundRunner:
                     {
                         "url": self.url,
                         "status": response.status_code,
+                        "elapsed": response.elapsed,
                         "timestamp": now + response.elapsed,
                     }
                 )
@@ -69,6 +70,7 @@ class BackgroundRunner:
                     {
                         "url": self.url,
                         "status": "ERROR",
+                        "elapsed": "N/A",
                         "timestamp": now,
                     }
                 )

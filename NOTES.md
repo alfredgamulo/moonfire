@@ -2,8 +2,6 @@
 
 I was able to create a functioning deployment of an ECS service running a configurable web app that runs a background task smoke test.
 
-I'll leave the app up and running and can be seen at http://moonfire-1325781322.us-east-1.elb.amazonaws.com/
-
 ___
 > **What are some ways to build a dummy endpoint for the sake of testing the above spike?**
 
