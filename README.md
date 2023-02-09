@@ -1,6 +1,6 @@
 # moonfire
 
-This project is built after the recruiting assignment from https://github.com/lunacare/recruiting/blob/main/infrastructure.md
+This project is built after the recruiting assignment from [prompt.md](prompt.md).
 
 **This document outlines the development process for this project app.
 For notes about take-home assignment, my general thoughts, and answers to the outstanding questions, please read the [NOTES.md](NOTES.md)**
